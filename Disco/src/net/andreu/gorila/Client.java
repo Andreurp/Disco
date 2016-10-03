@@ -3,24 +3,26 @@ package net.andreu.gorila;
 public class Client {
 
 	private String nom;
-	private int edat;
+	private int edad;
 	private String sexe;
 	private int diners;
+	private String calsat;
 	
-	public Client(String nom, int edat, String sexe, int diners) {
+	public Client(String nom, int edad, String sexe, int diners, String calsat) {
 		super();
 		this.nom = nom;
-		this.edat = edat;
+		this.edad = edad;
 		this.sexe = sexe;
 		this.diners = diners;
+		this.calsat = calsat;
 	}
 
 	public String getNom() {
 		return nom;
 	}
 
-	public int getEdat() {
-		return edat;
+	public int getEdad() {
+		return edad;
 	}
 
 	public String getSexe() {
@@ -29,6 +31,15 @@ public class Client {
 
 	public int getDiners() {
 		return diners;
+	}
+
+	public String getCalsat() {
+		return calsat;
+	}
+
+	public String toString() {
+		return "Nom=" + getNom() + ", Edad=" + getEdad() + ", Sexe=" + getSexe()
+				+ ", diners=" + getDiners() + ", calsat=" + getCalsat();
 	}
 	
 	
