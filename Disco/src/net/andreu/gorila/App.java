@@ -16,7 +16,7 @@ public class App {
 
 		Random r = new Random();
 
-		Condicio c = new Condicio(20, "home", 50, "sabates");
+		Condicio c = new Condicio(20, "Home", 50, "sabates");
 		Porter porter = new Porter();
 
 		for (int i = 0; i < NUM_PERSONES; i++) {
@@ -25,6 +25,7 @@ public class App {
 					20 + r.nextInt(100), Calsat[r.nextInt(Calsat.length)]);
 			System.out.println(client.toString());
 			System.out.println(porter.potEntrar(c, client));
+			System.out.println("              ----------------------------");
 		}
 	}
 }
