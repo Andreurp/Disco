@@ -16,40 +16,32 @@ public class Condicio {
 	}
 	
 	public boolean comprovaEdad(int edadClient){
-		if(edadClient == -1){
-			return true;
+		if(edadClient != -1 || edadClient >= edad){
+			return false;
 		}
-		if(edadClient >= edad){
-			return true;
-		}
-		return false;
+		return true;
 	}
 	
+	@SuppressWarnings("null")
 	public boolean comprovaSexe(String sexeClient) {
-		if (sexeClient == null) {
-			return true;
-		} if(sexeClient.equals(sexe)) {
-			return true;
+		if (sexeClient != null || sexeClient.equals(sexe)) {
+			return false;
 		}
-		return false;
+		return true;
 	}
 	
+	@SuppressWarnings("null")
 	public boolean comprovaCalsat( String calsatClient) {
-		if(calsatClient == null) {
-			return true;
-		} if(calsatClient.equals(calsat)) {
-			return true;
+		if(calsatClient != null || calsatClient.equals(calsat)) {
+			return false;
 		}
-		return false;
+		return true;
 	}
 	
 	public boolean comprovaDiners(int dinersClient) {
-		if(dinersClient == -1) 
-			return true;
-		
-		if (dinersClient >= diners) {
-			return true;
+		if(dinersClient != -1 || dinersClient >= diners){ 
+			return false;
 		}
-		return false;
-}
+		return true;
+	}
 }

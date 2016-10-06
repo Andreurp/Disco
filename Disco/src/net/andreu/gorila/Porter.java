@@ -1,24 +1,15 @@
 package net.andreu.gorila;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Porter {
 
-	public List<Client> comprova(Condicio condicio, List<Client> client) {
-
-		List<Client> entren = new ArrayList();
-
-		for (Client client : client) {
-
-			if (condicio.comprovaEdad(client.getEdad())
-					&& condicio.comprovaSexe(client.getSexe())
-					&& condicio.comprovaCalsat(client.getCalsat())
-					&& condicio.comprovaDiners(client.getDiners())) {
-				entren.add(client);
-			}
+	public String potEntrar(Condicio c, Client client){
+		if(c.comprovaEdad(client.getEdad()) &&
+				c.comprovaSexe(client.getSexe()) &&
+				c.comprovaCalsat(client.getCalsat()) && 
+				c.comprovaDiners(client.getDiners())){
+			return "Pot entrar";
 		}
-
-		return entren;
-	}
+		return "No pot entrar";
+	}	
 }
